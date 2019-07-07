@@ -85,8 +85,10 @@ for (i in 1:nrow(complete.activity)) {
 total.steps.per.days <- aggregate(steps ~ date, data = complete.activity, sum)
 hist(total.steps.per.days$steps, breaks=20, col = "blue", xlab = "Total Number of Steps", 
      ylab = "Frequency", main = "Histogram of Total Number of Steps taken each Day")
-showMean <- mean(total.steps.per.days$steps)
-showMedian <- median(total.steps.per.days$steps)
+Mean <- mean(total.steps.per.days$steps)
+Median <- median(total.steps.per.days$steps)
+Mean
+Median
 ```
 The mean of the complete dataset (10766) is equal to the mean of the dataset without missing values while the median shifted from 10765 to 10766. Therefore, the mean and median are almost identical.
 
